@@ -96,7 +96,20 @@ Como a corrente est\'{a} no sentido do diodo, ele estar\'{a} polarizado diretame
 
 Para este circuito podemos escrever algumas express\~{o}es importantes para a determina\c{c}\~{a}o das caracter\'{\i}sticas do nosso diodo. Muitas delas n\~{a}o ser\~{a}o demonstradas e simplesmente apresentadas, pois suas demonstra\c{c}\~{o}es necessitam de t\'{e}cnicas matem\'{a}ticas mais avan\c{c}adas. As express\~{o}es s\~{a}o: \\
 
-********** c\'{o}digos gabriel ************ \\
+  \centerline{\begin{minipage}[c]{\textwidth}
+  		\label{eq1 - gabriel}
+  		\centering
+\begin{tabular}{@{}|c|c|@{}}
+\toprule
+Corrente secund\'{a}ria             & $I_{2}= \dfrac{V_{max}}{R_L}$                                \\ \midrule
+Tens\~{a}o m\'{e}dia na carga           & $V_{med}= \dfrac{V_{max}}{\pi}$                              \\ \midrule
+Corrente m\'{e}dia na carga         & $I_{cc}= \dfrac{I_{max}}{\pi}=\dfrac{V_{m ax}}{R_L\cdot\pi}$ \\ \midrule
+Tens\~{a}o inversa m\'{e}dia no diodo   & $V_{d_{med}}= - \dfrac{V_{max}}{\pi}$                        \\ \midrule
+Tens\~{a}o de pico inversa no diodo & $V_{max}$                                                    \\ \midrule
+Corrente m\'{e}dia no diodo         & $I_{cc}$                                                     \\ \bottomrule
+\end{tabular}
+  \end{minipage}}
+
 
 \subsection{Retificador de onda completa em ponte}
 O circuito em ponte utiliza quatro diodos ligados conforme mostra a figura 6a. Este circuito utiliza uma transformador de secund\'{a}rio simples, tendo como vantagem a n\~{a}o utiliza\c{c}\~{a}o de um transformador com tape central ou center tape. Na figura 6b temos a seq\"{u}\^{e}ncia de condu\c{c}\~{a}o dos diodos, e na figura 6c as principais formas de onda no circuito. Observe que neste circuito o diodo n\~{a}o possui mais como tens\~{a}o reversa 2V m\'{a}x, e sim a metade deste valor, que em alguns casos \'{e} essencial esta situa\c{c}\~{a}o, pois quanto maior a tens\~{a}o reversa do diodo mais oneroso pode se tornar o circuito. \\
@@ -122,9 +135,23 @@ O circuito em ponte utiliza quatro diodos ligados conforme mostra a figura 6a. E
 \subsubsection{Funcionamento do circuito}
 O retificador em ponte dispensa o uso do transformador com tomada central. Com isto, pode-se ter um retificador de onda completa ligado diretamente \`{a} rede el\'{e}trica. Quando A \'{e} positivo em rela\c{c}\~{a}o a B, a corrente sai de A passa por D1, RL, D3 e chega ao ponto B. Quando A \'{e} negativo em rela\c{c}\~{a}o a B, a corrente sai de B passa por D2, RL, D4 e chega ao ponto A. Conduzem somente dois diodos de cada vez. Quando o ponto A \'{e} positivo D1 e D3 conduzem. Quando o ponto A \'{e} negativo D2 e D4 conduzem. Para qualquer polaridade de A ou de B a corrente IL circula num \'{u}nico sentido em RL e por isto, a corrente em RL \'{e} cont\'{\i}nua. Temos somente os semiciclos positivos na sa\'{\i}da. A frequ\^{e}ncia de ondula\c{c}\~{a}o na sa\'{\i}da \'{e} o dobro da frequ\^{e}ncia de entrada.
 
-As express\~{o}es para as tens\~{o}es e correntes nos elementos do circuito e na carga s\~{a}o dadas na tabela a seguir.\\
+As express\~{o}es para as tens\~{o}es e correntes nos elementos do circuito e na carga s\~{a}o dadas na tabela a seguir. \\
 
-********** c\'{o}digos gabriel ************ \\
+  \centerline{\begin{minipage}[c]{\textwidth}
+  		\label{eq2 - gabriel}
+  		\centering
+\begin{tabular}{@{}|c|c|@{}}
+\toprule
+Corrente secund\'{a}ria             & $I_{2}= \dfrac{V_{max}}{R_L}$                                  \\ \midrule
+Tens\~{a}o m\'{e}dia na carga           & $V_{med}= \dfrac{2V_{max}}{\pi}$                               \\ \midrule
+Corrente m\'{e}dia na carga         & $I_{cc}= \dfrac{2I_{max}}{\pi}=\dfrac{2V_{m ax}}{R_L\cdot\pi}$ \\ \midrule
+Tens\~{a}o eficaz na carga          & $V_{rms}=\dfrac{V_{max}}{\sqrt{2}}$                            \\ \midrule
+Corrente eficaz na carga        & $I_{rms}=\dfrac{I_{max}}{\sqrt{2}}$                            \\ \midrule
+Tens\~{a}o inversa m\'{e}dia no diodo   & $V_{d_{med}}= - \dfrac{V_{max}}{\pi}$                          \\ \midrule
+Tens\~{a}o de pico inversa no diodo & $V_{max}$                                                      \\ \midrule
+Corrente m\'{e}dia no diodo         & $\dfrac{I_{cc}}{2}$                                            \\ \bottomrule
+\end{tabular}
+  \end{minipage}}
 
 \subsection{Retificador de onda completa com trafo de deriva\c{c}\~{a}o central}
 Este circuito, \'{e} apresentado no circuito da figura 7a. Neste circuito temos apenas dois diodos, onde um dos diodos conduz um semiciclo da corrente e o outro diodo conduz o outro semiciclo da corrente. Isto s\'{o} \'{e} poss\'{\i}vel porque o transformador possui uma deriva\c{c}\~{a}o central ou center tape – CT. Na realidade \'{e} como se fosse um transformador com uma prim\'{a}rio e dois secund\'{a}rios ligado sem s\'{e}rie, sendo o ponto de liga\c{c}\~{a}o destes o CT. Desta forma, cada enrolamento ir\'{a} fornecer corrente para um semi ciclo da onda. A figura 7b traz a seq\"{u}\^{e}ncia de condu\c{c}\~{a}o dos diodos como sendo ON para diodo conduzindo e OFF para diodo n\~{a}o conduzindo, e a figura 7c as formas de ondas nos elementos do circuito. \\
@@ -150,6 +177,19 @@ Este circuito, \'{e} apresentado no circuito da figura 7a. Neste circuito temos 
 
  \subsubsection{Funcionamento do circuito}
  Este circuito \'{e} tamb\'{e}m denominado de retificador de onda completa convencional. H\'{a} uma defasagem de 180º entre as tens\~{o}es de sa\'{\i}da do transformador, VA e VB. As tens\~{o}es VA e VB s\~{a}o medidas em rela\c{c}\~{a}o ao ponto C (0V ). Quando A \'{e} positivo, B \'{e} negativo, a corrente sai de A passa por D1 e RL e chega ao ponto C. Quando A \'{e} negativo, B \'{e} positivo, a corrente sai de B passa por D2 e RL e chega ao ponto C. Para qualquer polaridade de A ou de B a corrente IL circula num \'{u}nico sentido em RL e por isto, a corrente em RL \'{e} cont\'{\i}nua. Temos somente os semiciclos positivos na sa\'{\i}da. A frequ\^{e}ncia de ondula\c{c}\~{a}o na sa\'{\i}da \'{e} o dobro da frequ\^{e}ncia de entrada.
-Da mesma forma podemos escrever as express\~{o}es para as tens\~{o}es e correntes nos elementos do circuito e na carga:
+Da mesma forma podemos escrever as express\~{o}es para as tens\~{o}es e correntes nos elementos do circuito e na carga: \\
 
-********** c\'{o}digos gabriel ************ \\ 
+
+  \centerline{\begin{minipage}[c]{\textwidth}
+  		\label{eq3 - gabriel}
+  		\centering
+\begin{tabular}{@{}|c|c|@{}}
+\toprule
+Corrente secund\'{a}ria             & $I_{2}= \dfrac{V_{max}}{R_L}$                                  \\ \midrule
+Tens\~{a}o m\'{e}dia na carga           & $V_{med}= \dfrac{2V_{max}}{\pi}$                               \\ \midrule
+Corrente m\'{e}dia na carga         & $I_{cc}= \dfrac{2I_{max}}{\pi}=\dfrac{2V_{m ax}}{R_L\cdot\pi}$ \\ \midrule
+Tens\~{a}o inversa m\'{e}dia no diodo   & $V_{d_{med}}= - \dfrac{2V_{max}}{\pi}$                         \\ \midrule
+Tens\~{a}o de pico inversa no diodo & $2V_{max}$                                                     \\ \midrule
+Corrente m\'{e}dia no diodo         & $\dfrac{I_{cc}}{2}$                                            \\ \bottomrule
+\end{tabular}
+  \end{minipage}}
