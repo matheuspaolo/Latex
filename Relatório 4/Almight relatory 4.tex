@@ -1,0 +1,269 @@
+%% abtex2-modelo-relatorio-tecnico.tex, v-1.9.6 laurocesar
+%% Copyright 2012-2016 by abnTeX2 group at http://www.abntex.net.br/
+%%
+%% This work may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license
+%% The latest version of this license is in
+%%   http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2005/12/01 or later.
+%%
+%% This work has the LPPL maintenance status `maintained'.
+%%
+%% The Current Maintainer of this work is the abnTeX2 team, led
+%% by Lauro C\'{e}sar Araujo. Further information are available on
+%% http://www.abntex.net.br/
+%%
+%% This work consists of the files abntex2-modelo-relatorio-tecnico.tex,
+%% abntex2-modelo-include-comandos and abntex2-modelo-references.bib
+%%
+
+% ------------------------------------------------------------------------
+% ------------------------------------------------------------------------
+% abnTeX2: Modelo de Relat\'{o}rio T\'{e}cnico/Acad\^{e}mico em conformidade com
+% ABNT NBR 10719:2015 Informa\c{c}\~{a}o e documenta\c{c}\~{a}o - Relat\'{o}rio t\'{e}cnico e/ou
+% cient\'{\i}fico - Apresenta\c{c}\~{a}o
+% ------------------------------------------------------------------------
+% ------------------------------------------------------------------------
+
+\documentclass[
+	% -- op\c{c}\~{o}es da classe memoir --
+	12pt,				% tamanho da fonte
+	openright,			% cap\'{\i}tulos come\c{c}am em p\'{a}g \'{\i}mpar (insere p\'{a}gina vazia caso preciso)
+	oneside,			% para impress\~{a}o em recto e verso. Oposto a oneside
+	a4paper,			% tamanho do papel.
+	% -- op\c{c}\~{o}es da classe abntex2 --
+	%chapter=TITLE,		% t\'{\i}tulos de cap\'{\i}tulos convertidos em letras mai\'{u}sculas
+	%section=TITLE,		% t\'{\i}tulos de se\c{c}\~{o}es convertidos em letras mai\'{u}sculas
+	%subsection=TITLE,	% t\'{\i}tulos de subse\c{c}\~{o}es convertidos em letras mai\'{u}sculas
+	%subsubsection=TITLE,% t\'{\i}tulos de subsubse\c{c}\~{o}es convertidos em letras mai\'{u}sculas
+	% -- op\c{c}\~{o}es do pacote babel --
+	english,			% idioma adicional para hifeniza\c{c}\~{a}o
+	french,				% idioma adicional para hifeniza\c{c}\~{a}o
+	spanish,			% idioma adicional para hifeniza\c{c}\~{a}o
+	brazil,				% o \'{u}ltimo idioma \'{e} o principal do documento
+	]{abntex2}
+
+
+% ---
+% PACOTES
+% ---
+
+% ---
+% Pacotes fundamentais
+% ---
+\usepackage{lmodern}			% Usa a fonte Latin Modern
+\usepackage[T1]{fontenc}		% Selecao de codigos de fonte.
+\usepackage[utf8]{inputenc}		% Codificacao do documento (convers\~{a}o autom\'{a}tica dos acentos)
+\usepackage{indentfirst}		% Indenta o primeiro par\'{a}grafo de cada se\c{c}\~{a}o.
+\usepackage{color}				% Controle das cores
+\usepackage{graphicx}			% Inclus\~{a}o de gr\'{a}ficos
+\usepackage{microtype} 			% para melhorias de justifica\c{c}\~{a}o
+\usepackage{float}
+\usepackage{adjustbox}
+\usepackage{mwe} % new package from Martin scharrer
+\usepackage{caption}
+\usepackage{cellspace}
+\usepackage{gensymb}
+
+\setlength\cellspacetoplimit{4pt}
+\setlength\cellspacebottomlimit{4pt}
+
+
+
+\usepackage{adjustbox}
+\restylefloat{table}
+
+\setcounter{topnumber}{5}
+\setcounter{bottomnumber}{5}
+\setcounter{totalnumber}{5}
+\usepackage[section]{placeins}
+% ---
+
+% ---
+% Pacotes adicionais, usados no anexo do modelo de folha de identifica\c{c}\~{a}o
+% ---
+\usepackage{multicol}
+\usepackage{multirow}
+% ---
+	
+% ---
+% Pacotes adicionais, usados apenas no \^{a}mbito do Modelo Can\^{o}nico do abnteX2
+% ---
+\usepackage{lipsum}				% para gera\c{c}\~{a}o de dummy text
+% ---
+
+% ---
+% Pacotes de cita\c{c}\~{o}es
+% ---
+\usepackage[brazilian,hyperpageref]{backref}	 % Paginas com as cita\c{c}\~{o}es na bibl
+\usepackage[alf]{abntex2cite}	% Cita\c{c}\~{o}es padr\~{a}o ABNT
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amsfonts,amssymb}
+
+% ---
+% CONFIGURA\c{C}\~{O}ES DE PACOTES
+% ---
+
+% ---
+% Configura\c{c}\~{o}es do pacote backref
+% Usado sem a op\c{c}\~{a}o hyperpageref de backref
+\renewcommand{\backrefpagesname}{Citado na(s) p\'{a}gina(s):~}
+% Texto padr\~{a}o antes do n\'{u}mero das p\'{a}ginas
+\renewcommand{\backref}{}
+% Define os textos da cita\c{c}\~{a}o
+\renewcommand*{\backrefalt}[4]{
+	\ifcase #1 %
+		Nenhuma cita\c{c}\~{a}o no texto.%
+	\or
+		Citado na p\'{a}gina #2.%
+	\else
+		Citado #1 vezes nas p\'{a}ginas #2.%
+	\fi}%
+% ---
+
+% ---
+% Informa\c{c}\~{o}es de dados para CAPA e FOLHA DE ROSTO
+% ---
+\titulo{Relat\'{o}rio III}
+\autor{Gisele Ribeiro Gomes \\ Gabriel Marques de Silva Abreu \\ Matheus Paolo dos Anjos Mour\~{a}o \\ Paulo Chaves dos Santos J\'{u}nior}
+\local{Rio Branco, Acre}
+\data{2017}
+\instituicao{%
+  Universidade Federal do Acre - UFAC
+  \par
+  Bacharelado em Engenharia El\'{e}trica
+  \par
+  Laborat\'{o}rio de Eletr\^{o}nica I}
+\tipotrabalho{Relat\'{o}rio t\'{e}cnico}
+% O preambulo deve conter o tipo do trabalho, o objetivo,
+% o nome da institui\c{c}\~{a}o e a \'{a}rea de concentra\c{c}\~{a}o
+\preambulo{Relat\'{o}rio de Laborat\'{o}rio de Eletr\^{o}nica I, entregue para a composi\c{c}\~{a}o parcial da nota da N1.
+Orientador : Elmer Osman Hancco}
+% ---
+
+% ---
+% Configura\c{c}\~{o}es de apar\^{e}ncia do PDF final
+
+% alterando o aspecto da cor azul
+\definecolor{blue}{RGB}{41,5,195}
+
+% informa\c{c}\~{o}es do PDF
+\makeatletter
+\hypersetup{
+     	%pagebackref=true,
+		pdftitle={\@title},
+		pdfauthor={\@author},
+    	pdfsubject={\imprimirpreambulo},
+	    pdfcreator={LaTeX with abnTeX2},
+		pdfkeywords={abnt}{latex}{abntex}{abntex2}{relat\'{o}rio t\'{e}cnico},
+		colorlinks=true,       		% false: boxed links; true: colored links
+    	linkcolor=black,          	% color of internal links
+    	citecolor=blue,        		% color of links to bibliography
+    	filecolor=magenta,      		% color of file links
+		urlcolor=blue,
+		bookmarksdepth=4
+}
+\makeatother
+% ---
+
+% ---
+% Espa\c{c}amentos entre linhas e par\'{a}grafos
+% ---
+
+% O tamanho do par\'{a}grafo \'{e} dado por:
+\setlength{\parindent}{1.3cm}
+
+% Controle do espa\c{c}amento entre um par\'{a}grafo e outro:
+\setlength{\parskip}{0.2cm}  % tente tamb\'{e}m \onelineskip
+
+% ---
+% compila o indice
+% ---
+\makeindex
+% ---
+
+% ----
+% In\'{\i}cio do documento
+% ----
+\begin{document}
+
+% Seleciona o idioma do documento (conforme pacotes do babel)
+%\selectlanguage{english}
+\selectlanguage{brazil}
+
+% Retira espa\c{c}o extra obsoleto entre as frases.
+\frenchspacing
+
+% ----------------------------------------------------------
+% ELEMENTOS PR\'{E}-TEXTUAIS
+% ----------------------------------------------------------
+% \pretextual
+
+% ---
+% Capa
+% ---
+\imprimircapa
+% ---
+
+% ---
+% Folha de rosto
+% (o * indica que haver\'{a} a ficha bibliogr\'{a}fica)
+% ---
+\imprimirfolhaderosto*
+% ---
+
+% ---
+% Anverso da folha de rosto:
+% ---
+
+% ---
+% Agradecimentos
+
+% ---
+
+% ---
+% RESUMO
+% ---
+
+% resumo na l\'{\i}ngua vern\'{a}cula (obrigat\'{o}rio)
+\include{Resumo}
+% ---
+
+\include{Abstract}
+
+% ---
+% inserir lista de ilustra\c{c}\~{o}es
+% ---
+\pdfbookmark[0]{\listfigurename}{lof}
+\listoffigures*
+\cleardoublepage
+% ---
+
+% ---
+% inserir lista de tabelas
+% ---
+\pdfbookmark[0]{\listtablename}{lot}
+\listoftables*
+\cleardoublepage
+% ---
+% ---
+% inserir o sumario
+% ---
+\pdfbookmark[0]{\contentsname}{toc}
+\tableofcontents*
+\cleardoublepage
+% ---
+
+\textual
+\include{Introducao}
+
+\include{Desenvolvimento}
+
+\include{Procedimentos}
+\include{Conclusao}
+\postextual
+\bibliography{Referencias}
+
+\end{document}
