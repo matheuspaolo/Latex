@@ -4,6 +4,45 @@
 
 \chapter{Procedimentos e resultados}
 
+\section{Tarefa I}
+\subsection{Procedimento}
+\begin{description}
+	\item[a)]Monte o circuito com a carga RL (1 K$\Omega$ em serie com um trimpot de 22K$\Omega$), sem o capacitor C e também sem o ramo contendo o diodo Zener.
+	\item[b)] Imprima a forma de onda da tensão Vs do circuito, com o trimpot na posição de curto circuito.
+	\item[c)] Compare a amplitude do valor da tensão obtida com o valor esperado.
+	\item[d)] Comente ainda qual seria a amplitude do valor da tensão Vs , se utilizarmos o pino (3) ao invés do pino (2) do transformador?.
+\end{description}
+\subsection{Resultado}
+\begin{description}
+	\item[a)]Usando quatro diodos em configuração de ponte, a carga RL foi conectada em série nessa primeira parte, afim de analisar o comportamento da saída de onda.\\
+	**** imagem 1 birim *******\\
+	\item[b)] A forma de onda, como mostrado na figura[numero da figura] é de um sinal retificado de onda completa, com tensão pico de 10,6V e tensão eficaz de 6.95V RMS.\\
+	***** imagem 2 birim ******\\
+	\item[c)] Neste experimento foi usado um transformador abaixador de 1:5 com derivação central no secundário, e a ponte de diodos foi conectada aos pinos 1 e 2, fazendo com que a queda de tensão caia pela metade. Como a fonte de alimentação é de 127v RMS, a tensão entre os pino 1 e 3 do secundário do transformador deveria ser de aproximadamente 25,4V, e a tensão entre os pinos 1 e 2 do secundário deveria ser a metade disso, ou seja 12,7V.
+	Com o circuito montado com a ponte de diodos, a carga de 1K$\Omega$  e o trimpot de 22K$\Omega$ a tensão de pico na carga deveria ser de 12V.
+	As perdas dos valores ideais a serem obtidos e os valores que realmente foram apresentados durante o experimento em laboratório são normais, e são causadas por inúmeros fatores que vão desde a fabricação dos componentes como a montagem do circuito.\\
+	**** imagem 3 birim **** \\
+	\item[d)]Como dito antes, neste experimento foi usado um transformador abaixador de 1:5 com derivação central no secundário, a diferença de potencial, caso os pinos 1 e 3 do secundário fossem utilizados seria exatamente o dobro das medidas obtidas nesse experimento.
+\end{description}
+
+\section{Tarefa III}
+\subsection{Procedimentos}
+\begin{description}
+	\item[a)] Ligue agora o diodo Zener (1N4738 ou um similar de 2,1V, 3,2V 5,1V) em série com Rl. \\
+	\item[b)] Verifique se Rl = 1 K$\Omega$ é suficiente para limitar a corrente no diodo para evitar superaquecimento e ligue-o em série com o diodo.
+	\item[c)] Observe com o osciloscópio a forma de onda de Vz e compare-a com as observadas nos itens anteriores. Comente os resultados obtidos.
+\end{description}
+
+\subsection{Resultados}
+\begin{description}
+	\item[a)] Com a adição dos últimos componentes, o circuito agora está completo.\\
+	***** imagem 4 birm *****\\
+	\item[b)] Antes de conectar Diodo Zener ao circuito, foi feito um teste rápido afim de verificar a temperatura do componente caso ele fosse adicionado ao circuito. O resultado foi satisfatório, não apresentando superaquecimento, caso contrário a resistência de 1K$\Omega$ seria substituída por outra de valor maior.
+	\item[c)] Como podemos ver no gráficos abaixo da saída de tensão, o diodo zener teve a função de estabilizar a saída da onda do capacitor, visto que esta oscilava bastante e não seria um sinal satisfatório para o uso prático. O diodo zener serviu como um filtro, e deixou o sinal o sinal com o mínimo de trepidações. É claro que o resultado não é exatamente perfeito como os obtidos em simuladores, mas a trepidação existente é pequena a um nível que pode ser ignorada.\\
+	***** imagem 5 birim *****\\
+	***** imagem 6 birim *****
+\end{description}
+
 \section{Tarefa IV}
 \subsection{Procedimento}
 Explique o funcionamento do diodo Zener?
