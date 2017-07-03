@@ -15,20 +15,44 @@
 \subsection{Resultado}
 \begin{description}
 	\item[a)]Usando quatro diodos em configuração de ponte, a carga RL foi conectada em série nessa primeira parte, afim de analisar o comportamento da saída de onda.\\
-	**** imagem 1 birim *******\\
+	\centerline{\begin{minipage}[c]{\textwidth}
+			\centering
+			\noindent
+			\captionof{figure}{Circuito retificador de onda completa}
+			\includegraphics[width=0.5\textwidth]{Imagens/R1P1Im1.png}
+			\label{Imagem1-birimba}
+	\end{minipage}}
 	\item[b)] A forma de onda, como mostrado na figura[numero da figura] é de um sinal retificado de onda completa, com tensão pico de 10,6V e tensão eficaz de 6.95V RMS.\\
-	***** imagem 2 birim ******\\
+	
+	\centerline{\begin{minipage}[c]{\textwidth}
+			\centering
+			\noindent
+			\captionof{figure}{Forma de onda}
+			\includegraphics[width=0.5\textwidth]{Imagens/R1P2Im1.png}
+			\legend{Fonte: \cite{Osciloscopio}}
+			\label{imagem2 - birimba}
+	\end{minipage}}
+	
 	\item[c)] Neste experimento foi usado um transformador abaixador de 1:5 com derivação central no secundário, e a ponte de diodos foi conectada aos pinos 1 e 2, fazendo com que a queda de tensão caia pela metade. Como a fonte de alimentação é de 127v RMS, a tensão entre os pino 1 e 3 do secundário do transformador deveria ser de aproximadamente 25,4V, e a tensão entre os pinos 1 e 2 do secundário deveria ser a metade disso, ou seja 12,7V.
 	Com o circuito montado com a ponte de diodos, a carga de 1K$\Omega$  e o trimpot de 22K$\Omega$ a tensão de pico na carga deveria ser de 12V.
 	As perdas dos valores ideais a serem obtidos e os valores que realmente foram apresentados durante o experimento em laboratório são normais, e são causadas por inúmeros fatores que vão desde a fabricação dos componentes como a montagem do circuito.\\
-	**** imagem 3 birim **** \\
+	
+	\centerline{\begin{minipage}[c]{\textwidth}
+			\centering
+			\noindent
+			\captionof{figure}{Dados referentes a onda}
+			\includegraphics[width=0.5\textwidth]{Imagens/R1P3Im1.png}
+			\legend{Fonte: \cite{Osciloscopio}}
+			\label{}
+	\end{minipage}}
+
 	\item[d)]Como dito antes, neste experimento foi usado um transformador abaixador de 1:5 com derivação central no secundário, a diferença de potencial, caso os pinos 1 e 3 do secundário fossem utilizados seria exatamente o dobro das medidas obtidas nesse experimento.
 \end{description}
 
 \section{Tarefa III}
 \subsection{Procedimentos}
 \begin{description}
-	\item[a)] Ligue agora o diodo Zener (1N4738 ou um similar de 2,1V, 3,2V 5,1V) em série com Rl. \\
+	\item[a)] Ligue agora o diodo Zener (1N4738 ou um similar de 2,1V, 3,2V 5,1V) em série com Rl.
 	\item[b)] Verifique se Rl = 1 K$\Omega$ é suficiente para limitar a corrente no diodo para evitar superaquecimento e ligue-o em série com o diodo.
 	\item[c)] Observe com o osciloscópio a forma de onda de Vz e compare-a com as observadas nos itens anteriores. Comente os resultados obtidos.
 \end{description}
@@ -36,11 +60,36 @@
 \subsection{Resultados}
 \begin{description}
 	\item[a)] Com a adição dos últimos componentes, o circuito agora está completo.\\
-	***** imagem 4 birm *****\\
+	
+	\centerline{\begin{minipage}[c]{\textwidth}
+			\centering
+			\noindent
+			\captionof{figure}{Representaçao do circuito montado}
+			\includegraphics[width=0.5\textwidth]{Imagens/R3P1Im1.png}
+			\label{}
+	\end{minipage}}
+	
 	\item[b)] Antes de conectar Diodo Zener ao circuito, foi feito um teste rápido afim de verificar a temperatura do componente caso ele fosse adicionado ao circuito. O resultado foi satisfatório, não apresentando superaquecimento, caso contrário a resistência de 1K$\Omega$ seria substituída por outra de valor maior.
 	\item[c)] Como podemos ver no gráficos abaixo da saída de tensão, o diodo zener teve a função de estabilizar a saída da onda do capacitor, visto que esta oscilava bastante e não seria um sinal satisfatório para o uso prático. O diodo zener serviu como um filtro, e deixou o sinal o sinal com o mínimo de trepidações. É claro que o resultado não é exatamente perfeito como os obtidos em simuladores, mas a trepidação existente é pequena a um nível que pode ser ignorada.\\
-	***** imagem 5 birim *****\\
-	***** imagem 6 birim *****
+
+	\centerline{\begin{minipage}[c]{\textwidth}
+			\centering
+			\noindent
+			\captionof{figure}{Forma de onda}
+			\includegraphics[width=0.5\textwidth]{Imagens/R3P3Im1.png}
+			\legend{Fonte: \cite{Osciloscopio}}
+			\label{}
+	\end{minipage}}
+
+	\centerline{\begin{minipage}[c]{\textwidth}
+			\centering
+			\noindent
+			\captionof{figure}{Dados obtidos}
+			\includegraphics[width=0.5\textwidth]{Imagens/R3P3Im2.png}
+			\legend{Fonte: \cite{Osciloscopio}}
+			\label{}
+	\end{minipage}}
+
 \end{description}
 
 \section{Tarefa IV}
@@ -59,10 +108,24 @@ Suas principais características elétricas são:
 	\item VZ é a tolerância de tensão do diodo Zener.
 \end{itemize}
 
-A curva característica do zener é mostrada na figura abaixo:
+\noindent A curva característica do zener é mostrada na figura abaixo:
 
-******* f1 gisele ********* \\
+\centerline{\begin{minipage}[c]{\textwidth}
+		\centering
+		\noindent
+		\captionof{figure}{Curva característica do diodo Zener}
+		\includegraphics[width=0.5\textwidth]{Imagens/R4PUIm1.png}
+		\legend{Fonte: \cite{R4PUIm1}}
+		\label{}
+\end{minipage}}
 
-Abaixo a simbologia usual do diodo Zener:
+\noindent Abaixo a simbologia usual do diodo Zener:
 
-******* f2 gisele **********
+\centerline{\begin{minipage}[c]{\textwidth}
+		\centering
+		\noindent
+		\captionof{figure}{Simbologia do Zener}
+		\includegraphics[width=0.5\textwidth]{Imagens/R4PUIm2.png}
+		\legend{Fonte: \cite{R4PUIm2}}
+		\label{}
+\end{minipage}}
