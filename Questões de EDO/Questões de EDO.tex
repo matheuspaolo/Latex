@@ -126,21 +126,20 @@
 % ---
 % Informa\c{c}\~{o}es de dados para CAPA e FOLHA DE ROSTO
 % ---
-\titulo{Relat\'{o}rio IV}
-\autor{Francisco Edson Birimba Brito \\ Gisele Ribeiro Gomes \\ Gabriel Marques de Silva Abreu \\ Matheus Paolo dos Anjos Mour\~{a}o \\ Paulo Chaves dos Santos J\'{u}nior}
+\titulo{Modelagem matemática}
+\autor{Matheus Paolo dos Anjos Mour\~{a}o \\ Paulo Chaves dos Santos J\'{u}nior}
 \local{Rio Branco, Acre}
 \data{2017}
 \instituicao{%
   Universidade Federal do Acre - UFAC
   \par
-  Bacharelado em Engenharia El\'{e}trica
   \par
-  Laborat\'{o}rio de Eletr\^{o}nica I}
-\tipotrabalho{Relat\'{o}rio t\'{e}cnico}
+  Equações Diferenciais Ordinárias I}
+\tipotrabalho{Solucionário}
 % O preambulo deve conter o tipo do trabalho, o objetivo,
 % o nome da institui\c{c}\~{a}o e a \'{a}rea de concentra\c{c}\~{a}o
-\preambulo{Relat\'{o}rio de Laborat\'{o}rio de Eletr\^{o}nica I, entregue para a composi\c{c}\~{a}o parcial da nota da N1.
-Orientador : Elmer Osman Hancco}
+\preambulo{Resoluções dos problemas referentes a modelagem matemática, entregue para a composi\c{c}\~{a}o parcial da nota da N1.
+Orientador : Marcos Fabiano Firbida Eduardo}
 % ---
 
 % ---
@@ -193,60 +192,13 @@ Orientador : Elmer Osman Hancco}
 %\selectlanguage{english}
 \selectlanguage{brazil}
 
-% Retira espa\c{c}o extra obsoleto entre as frases.
 \frenchspacing
 
-% ----------------------------------------------------------
-% ELEMENTOS PR\'{E}-TEXTUAIS
-% ----------------------------------------------------------
-% \pretextual
-
-% ---
-% Capa
-% ---
 \imprimircapa
-% ---
 
-% ---
-% Folha de rosto
-% (o * indica que haver\'{a} a ficha bibliogr\'{a}fica)
-% ---
 \imprimirfolhaderosto*
-% ---
 
-% ---
-% Anverso da folha de rosto:
-% ---
-
-% ---
-% Agradecimentos
-
-% ---
-
-% ---
-% RESUMO
-% ---
-
-% resumo na l\'{\i}ngua vern\'{a}cula (obrigat\'{o}rio)
 \include{Resumo}
-% ---
-
-\include{Abstract}
-
-% ---
-% inserir lista de ilustra\c{c}\~{o}es
-% ---
-\pdfbookmark[0]{\listfigurename}{lof}
-\listoffigures*
-\cleardoublepage
-% ---
-
-% ---
-% inserir lista de tabelas
-% ---
-% ---
-% inserir o sumario
-% ---
 \pdfbookmark[0]{\contentsname}{toc}
 \tableofcontents*
 \cleardoublepage
@@ -255,8 +207,6 @@ Orientador : Elmer Osman Hancco}
 \textual
 \include{Introducao}
 \include{Procedimentos}
-\include{Conclusao}
 \postextual
-\bibliography{Referencias}
 
 \end{document}
