@@ -1,0 +1,143 @@
+\documentclass[
+	% -- op\c{c}\~{o}es da classe memoir --
+	12pt,				% tamanho da fonte
+	openright,			% cap\'{\i}tulos come\c{c}am em p\'{a}g \'{\i}mpar (insere p\'{a}gina vazia caso preciso)
+	oneside,			% para impress\~{a}o em recto e verso. Oposto a oneside
+	a4paper,			% tamanho do papel.
+	english,			% idioma adicional para hifeniza\c{c}\~{a}o
+	french,				% idioma adicional para hifeniza\c{c}\~{a}o
+	spanish,			% idioma adicional para hifeniza\c{c}\~{a}o
+	brazil,				% o \'{u}ltimo idioma \'{e} o principal do documento
+	]{abntex2}
+
+\usepackage{lmodern}			% Usa a fonte Latin Modern
+\usepackage[T1]{fontenc}		% Selecao de codigos de fonte.
+\usepackage[utf8]{inputenc}		% Codificacao do documento (convers\~{a}o autom\'{a}tica dos acentos)
+\usepackage{indentfirst}		% Indenta o primeiro par\'{a}grafo de cada se\c{c}\~{a}o.
+\usepackage{color}				% Controle das cores
+\usepackage{graphicx}			% Inclus\~{a}o de gr\'{a}ficos
+\usepackage{microtype} 			% para melhorias de justifica\c{c}\~{a}o
+\usepackage{float}
+\usepackage{adjustbox}
+\usepackage{mwe} % new package from Martin scharrer
+\usepackage{caption}
+\usepackage{cellspace}
+\usepackage{gensymb}
+
+\setlength\cellspacetoplimit{4pt}
+\setlength\cellspacebottomlimit{4pt}
+
+
+
+\usepackage{adjustbox}
+\restylefloat{table}
+
+\setcounter{topnumber}{5}
+\setcounter{bottomnumber}{5}
+\setcounter{totalnumber}{5}
+\usepackage[section]{placeins}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{lipsum}
+\usepackage[brazilian,hyperpageref]{backref}	 % Paginas com as cita\c{c}\~{o}es na bibl
+\usepackage[alf]{abntex2cite}	% Cita\c{c}\~{o}es padr\~{a}o ABNT
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amsfonts,amssymb}
+
+% Configura\c{c}\~{o}es do pacote backref
+% Usado sem a op\c{c}\~{a}o hyperpageref de backref
+\renewcommand{\backrefpagesname}{Citado na(s) p\'{a}gina(s):~}
+% Texto padr\~{a}o antes do n\'{u}mero das p\'{a}ginas
+\renewcommand{\backref}{}
+% Define os textos da cita\c{c}\~{a}o
+\renewcommand*{\backrefalt}[4]{
+	\ifcase #1 %
+		Nenhuma cita\c{c}\~{a}o no texto.%
+	\or
+		Citado na p\'{a}gina #2.%
+	\else
+		Citado #1 vezes nas p\'{a}ginas #2.%
+	\fi}%
+% ---
+
+% ---
+% Informa\c{c}\~{o}es de dados para CAPA e FOLHA DE ROSTO
+% ---
+\titulo{Relat\'{o}rio V}
+\autor{Francisco Edson Birimba Brito \\ Gisele Ribeiro Gomes \\ Gabriel Marques de Silva Abreu \\ Matheus Paolo dos Anjos Mour\~{a}o \\ Paulo Chaves dos Santos J\'{u}nior}
+\local{Rio Branco, Acre}
+\data{2017}
+\instituicao{%
+  Universidade Federal do Acre - UFAC
+  \par
+  Bacharelado em Engenharia El\'{e}trica
+  \par
+  Laborat\'{o}rio de Eletr\^{o}nica I}
+\tipotrabalho{Relat\'{o}rio t\'{e}cnico}
+% O preambulo deve conter o tipo do trabalho, o objetivo,
+% o nome da institui\c{c}\~{a}o e a \'{a}rea de concentra\c{c}\~{a}o
+\preambulo{Relat\'{o}rio de Laborat\'{o}rio de Eletr\^{o}nica I, entregue para a composi\c{c}\~{a}o parcial da nota da N1.
+Orientador : Elmer Osman Hancco}
+% ---
+
+% ---
+% Configura\c{c}\~{o}es de apar\^{e}ncia do PDF final
+
+% alterando o aspecto da cor azul
+\definecolor{blue}{RGB}{41,5,195}
+
+% informa\c{c}\~{o}es do PDF
+\makeatletter
+\hypersetup{
+     	%pagebackref=true,
+		pdftitle={\@title},
+		pdfauthor={\@author},
+    	pdfsubject={\imprimirpreambulo},
+	    pdfcreator={LaTeX with abnTeX2},
+		pdfkeywords={abnt}{latex}{abntex}{abntex2}{relat\'{o}rio t\'{e}cnico},
+		colorlinks=true,       		% false: boxed links; true: colored links
+    	linkcolor=black,          	% color of internal links
+    	citecolor=blue,        		% color of links to bibliography
+    	filecolor=magenta,      		% color of file links
+		urlcolor=blue,
+		bookmarksdepth=4
+}
+\makeatother
+
+\setlength{\parindent}{1.3cm}
+
+\setlength{\parskip}{0.2cm}  % tente tamb\'{e}m \onelineskip
+
+\makeindex
+
+\begin{document}
+
+\selectlanguage{brazil}
+
+\frenchspacing
+
+\imprimircapa
+
+\imprimirfolhaderosto*
+
+\include{Resumo}
+
+\include{Abstract}
+
+\pdfbookmark[0]{\listfigurename}{lof}
+\listoffigures*
+
+\cleardoublepage
+\pdfbookmark[0]{\contentsname}{toc}
+\tableofcontents*
+
+\cleardoublepage
+
+\textual
+\include{Introducao}
+\include{Procedimentos}
+\include{Conclusao}
+\postextual
+\bibliography{Referencias}
+
+\end{document}

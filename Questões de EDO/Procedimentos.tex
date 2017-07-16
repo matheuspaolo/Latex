@@ -5,143 +5,91 @@
 \chapter{Problemas propostos}
 
 \section{Problema 1.3.22}
-Suponha que um buraco tenha sido feito através do centro da Terra, atravessando-a de ponta a ponta, e uma bola de boliche com massa $m$ seja jogada no buraco, conforme mostra a figura abaixo. Construa um modelo matemático que descreve o movimento da bola. Em um dado instante $t$, seja $r$ a distância do centro da Terra até a massa $m$, $M$ a massa da Terra, $M_{r}$ a massa da parte da Terra dentro de uma esfera de raio $r$ e $\delta$, a densidade constante da Terra. \\
+Para uma ED linear, um PVI de ordem n é:
+Resolver:
+\begin{equation*}
+a_{n}(x) \frac{d^{n}y}{dx^{n}} + a_{n-1} \frac{d^{n-1}y}{dx^{n-1}} + ... + ... a_{1}(x) \frac{dy}{dx} + a_{0}(x)y = g(x)
+\end{equation*}
 
-\centerline{\begin{minipage}[c]{\textwidth}
-		\centering
-		\noindent
-		\includegraphics[width=0.3\textwidth]{imagem.png}
-		\label{}
-\end{minipage}}
-\subsection{Problematização}
-Devemos construir um modelo matemático que relacione o movimento que a bola de boliche, em queda, em um instante t á uma distância r do centro da terra.
-
-\subsection{Dados}
-\begin{center}
-	\noindent $m= $\textit{ massa da bola de boliche\\}
-	\noindent $M=$\textit{ massa da Terra\\}
-	\noindent $r=$\textit{ distância entre a bola e o centro da Terra\\}
-	\noindent $M_{r}=$\textit{ massa dentro do raio\\}
-	\noindent $R=$\textit{ raio da Terra\\}
-	\noindent $\delta = $\textit{ densidade constante da Terra\\}
-\end{center}
-
-
-\subsection{Construção do modelo}
-Partindo da segunda lei de Newton, a qual afirma que a força resultante que atua sobre um corpo é proporcional ao produto da massa pela aceleração por ele adquirida. Logo:
+Sujeita a:
 \begin{equation}\label{eq1}
-F_{r} = m \cdot a
-\end{equation}
-É conhecido também, que a aceleração pode ser obtida a partir da derivada da velocidade em relação a um instante t, que por sua vez é a derivada de um espaço r em relação a um instante t. Assim, podemos definir a aceleração de um corpo, como a derivada de segunda ordem de r em relação a t:\\
-
-\begin{equation}\label{eq2}
-a = \frac{d^{2}r}{dt^{2}}
+y(x_{0}) = y_{0}, y'(x_{0}) = y_{1}, ... , y^{n-1}(x_{0}) = y_{n-1} 
 \end{equation}
 
-\noindent Aplicando (\ref{eq2}) em (\ref{eq1}), obtém-se:
-\begin{equation}\label{eqf}
-F_{R} = m \cdot \frac{d^{2}r}{dt^{2}}
+Obs: Resolver o PVI \eqref{eq1} é procurar uma finção definida em algum intervalo $I$, contendo $x_{0}$ que satisfaça a ED e os $n$ condições iniciais especificadas em $x_{0}$.
+
+O Teorema a seguir dá condições suficientes para a existência de uma única solução para \eqref{eq1}.
+
+\subsection{Teorema 1 (existência e unicidade)}
+Seham $a_{n}(x), a_{n-1}(x), ... , a_{0}(x)$ e $g(x)$ contínuas em um intervalo $I$ e seja $a_{n}(x)$ diferente de $0$ para todo $x_{0}$ pertencente a $I$.
+Se $x = x_{0}$ for um ponto qualquer nesse intervalo, então existe uma única solução $y(x)$ do PVI \eqref{eq1} nesse intervalo.
+
+\subsubsection{Exemplo 1}
+O PVI:
+\begin{equation}\label{exemplo1}
+3y''' + 5y'' + y' + 7y = 0
+\end{equation} 
+\begin{equation}\label{exemplo1.2}
+y(1) = 0, y'(1) = 0, y''(1) = 0
 \end{equation}
 
-\noindent Para obtermos as respectivas massas, podemos valer-nos da seguinte característica intrínseca dos sólidos:
-\begin{equation*}
-d= \frac{M}{V}
-\end{equation*}
+possui a solução trivial $y=0$, uma vez que a ED é de 3º ordem, é linear e possui todas os coeficientes constantes, isto é, contínuas, ou seja, o Teorema 1 está satisfeito. Logo, a soluçãp $y = 0 $ do PVI é única em todo intervalo $I$, tal que 0 pertence a $I$.
 
-\noindent Onde $d$ é a densidade do sólido, $M$ a massa e $V$ o volume do mesmo.
-Logo:
-\begin{equation*}
-M = d \cdot V
-\end{equation*}
-\noindent Como os objetos em questão possuem formato esférico, teremos:
-\begin{equation*}
-V = \frac{4\pi R^{3}}{3}
-\end{equation*}
-
-\noindent Assim:
-\begin{equation}\label{eq3}
-M = \frac{4\pi R^{3}}{3} \cdot \delta \rightarrow M_{r} = \frac{4\pi R^{3}}{3} \cdot \delta
+\subsubsection{Exemplo 2}
+A função $y=3e^{2x}+ e^{-2x} -3x$ é uma solução do PVI:
+\begin{equation}\label{key}
+y'' - 4y = 12x
+y(0) = 4 e y'(0) = 1.
 \end{equation}
 
-\noindent Para fins de simplificação, podemos fazer o seguinte:
-\begin{equation}\label{eq4}
-M = \frac{4\pi R^{3}}{3} \cdot \delta \rightarrow 4\pi \delta = \frac{3M}{R^{3}}
-\end{equation}
+Notemos que a EDO é linear de ordem 2, além disso, os coeficientes são constantes, logo são contínuas. $g(x) - 12x$ é contínua para todo $x$ pertencente aos reais e $a_{2}(x)$ é diferente de 0 sobre todo intervalo contendo $x_{0} = 0$.
+Portanto, pelo Teorema 1, temos que $y=3e^{2x} + e^{-2x} -3x$ é a única solução do PVI.
+Obs: As hipóteses do Teorema 1, de que $a_{i}(x)..........$ sejam contínuas e $xxxxx$ diferente de 0 para todo $x$ pertencente a I, então a solução do PVI pode não ser única.
 
-\noindent Aplicando \eqref{eq4} em \eqref{eq3}, obteremos:
-\begin{equation*}
-M_{r}= \frac{M \cdot r^{3}}{R^{3}}
+\subsubsection{Exemplo 3}
+A função $y = cx^{2} + x + 3$ é uma solução do PVI:
+\begin{equation*}\label{ex3}
+x^{2}y'' - 2xy' +2y = 6
+y(0) = 3, y'(0) = 1
 \end{equation*}
 
-Baseado na lei de gravitação universal, formulada por Isaac Newton, podemos afirmar que força de atração gravitacional entre dois corpos é diretamente proporcional a massa dos corpos em questão e inversamente proporcional ao quadrado da distância entre os dois corpos.
-\begin{equation*}
-F_{G} = G \cdot \frac{m_{1} \cdot m_{2}}{r^{2}}
-\end{equation*}
+no intervalo (- infinito, + infinito). Porém, para $x = 0$ $a_{2}(0) = 0^{2} = 0$, isto é, o coeficiente $a_{2}(x)$ não está dentro das hipóteses do Teorema !, isto é, a função $y = cx^2+x+3$ não é a única solução para o PVI dado. Observamos que para qualquer $c pertencence a R$ tomado, iremos obter uma solução diferente para o PVI. Portanto, se as hipóteses do Teorema 1 não são satisfeitas, não teremos a garantia de unicidade da solução.
 
-\noindent A força gravitacional entre $m$ e $M_{r}$, é dada então por:
-\begin{equation*}
-F_{G} = G \cdot \frac{m \cdot \frac{M \cdot r^{3}}{R^{3}}}{r^{2}} \rightarrow F_{G} = G \cdot \frac{m \cdot M \cdot r^{3}}{R^{3} \cdot r^{2}}
-\end{equation*}
+\section{Equações homogêneas}
+Uma EDO LINEAR DE ORDEM $n$ de forma $a_n(x)\dfrac{d^ny}{dx^(n)}$
 
-\begin{equation}\label{eq5}
-F_{G} = G \cdot \frac{m \cdot M \cdot r}{R^{3}}
-\end{equation}
+%\begin{equation}\label{key}
+$a_n(x)\dfrac{d^ny}{dx^(n)}=a_{n-1}(x)\dfrac{d^{n-1}y}{dx^{n-1}}+...+a_1(x)\dfrac{dy}{dx}+a_0(x)y=0$ (2)
 
-\noindent Agora, pode-se fazer uma relação de igualdade entre as forças \eqref{eqf} e \eqref{eq5}:
-\begin{equation*}
-F_{R} = F_{G}
-\end{equation*}
-\begin{equation*}
-m \cdot \frac{d^{2}r}{dt^{2}} = G \cdot \frac{m \cdot M \cdot r}{R^{3}}
-\end{equation*}
-\begin{equation}\label{eq6}
-\boldmath
-\frac{d^{2}r}{dt^{2}} = G \cdot \frac{M \cdot r}{R^{3}}
-\end{equation}
+%\end{equation}
+É chamado de equação homogênea, e a EDO
+$a_n(x)\dfrac{d^ny}{dx^(n)}=a_{n-1}(x)\dfrac{d^{n-1}y}{dx^{n-1}}+...+a_1(x)\dfrac{dy}{dx}=g(x)$ (3)
+chamada de não-homogênea.
+Obs.: Deveremos que para resolver uma EDO linear não-homogênea (3), precisamos primeiramente ser capazes de resolver a equação homogênea associada (2).
 
-\textbf{A \autoref{eq6} é o modelo matemático que relaciona as grandezas necessárias, a uma distância $r$ e um instante $t$.}
+(2) Daqui para frente vamos sempre considerar que:
+\begin{enumerate}
+	\item Os coeficientes $a_i(x), i=0,1,2,...,n$ são contínuas.
+	\item $g(x)$ é contínua.
+	\item $a_n(x) \neq 0$ para todo $x$ no intervalo.
+\end{enumerate}
 
-\section{Problema 1.3.23}
-Na teoria de aprendizagem, supõe-se que a taxa segundo a qual um assunto é memorizado é proporcional à quantidade a ser memorizada. Suponha que M denote a quantidade total de assunto a ser memorizado e $A(t)$ a quantidade memorizada no instante $t$ > 0. Determine uma equação diferencial para a quantidade $A(t)$.
+\section{Operadores Lineares}
+Frequentemente usa-se o símbolo D quando se faz uma diferenciação por exemplo $$\dfrac{dy}{dx}=D_y$$ O símbolo D é chamado (sub)operador diferencial(sub) uma vez que transforma uma função diferencial em outra função.
 
-\subsection{Dados}
-\begin{center}
-	\noindent $M= $\textit{ assunto total a ser memorizado\\}
-	\noindent $A(t)=$\textit{ quantidade memorizada, num instante $t > 0$\\}
-\end{center}
-\subsection{Lógica e modelagem}
-O primeiro passo é estipular uma constante de aprendizagem, tendo em vista que existem diferentes formas e níveis de aprendizagem. Essa constante é uma constante usual que torna o valor da E.D.O o mais próximo do real quanto seja possível.
-\begin{center}
-	\noindent $k= $\textit{ constante proporcional de aprendizagem\\}
-\end{center}
+Por exemplo: $$D(cos(4x))=-4sen(4x), D(5x^3-6x^2)=15x^2-12x$$
 
-Pensa-se agora nas relações e correlações entre os dados acima citados e, ainda, na utilidade dessas relações para a modelagem matemática deste problema.
+Dessa forma, derivadas de ordem superior o podem ser expressos em formas de D de uma forma natural.
 
-\textit{“A taxa segundo a qual um assunto é memorizado é proporcional à quantidade a ser memorizada. ”}
-Logo:
-\begin{equation*}
-\frac{dA}{dt} \propto M
-\end{equation*}
+$$\dfrac{d}{dx}(\dfrac{dy}{dx})=\dfrac{d^2y}{dx^2}=D(Dy)=D^2y$$
 
-Porém, deve se notar que $A(t)$ denota quantidade já memorizada – num instante $t$; assim, a medida que $A(t)$ cresce (quando $t>0$) o total de assunto a ser memorizado decresce. Decrescendo junto, assim, a taxa de memorização.
-Para fins de entendimento, podemos fazer a seguinte projeção:
-\[ \lim_{t \to t_{0}} A(t) = M \]
-Onde $t_{0}$ é o instante em que todo o assunto já foi memorizado.
-Tomando todas essas hipóteses, é fácil montar uma relação; a quantidade memorizada será proporcional a diferença entre o total que deve ser memorizado e a quantidade já memorizada, adicionando uma constante de proporcionalidade.
-\begin{equation}\label{eqmemo}
-\boldmath
-	\frac{dA}{dt} = k(M-A(t))
-\end{equation}
+em geral temos que $\dfrac{d^ny}{dx^n}=D^ny$, onde $y$ é uma função (sub)suficientemente diferenciável.(sub)
 
-\section{Problema 1.3.24}
-\subsection{Lógica e modelagem}
-Assim como o problema anterior, devemos estipular uma constante de proporcionalidade, afim de obter resultados próximos a realidade:
-\begin{center}
-	\noindent $c= $\textit{ constante proporcional de esquecimento\\}
-\end{center}
-Percebendo que \textit{“a taxa segundo a qual o assunto é esquecido seja proporcional à quantidade memorizada no instante $t > 0$”}, podemos afirmar que a taxa de esquecimento cresce juntamente a quantidade já memorizada ($A(t)$) e é uma grandeza que se opõe ao total de assunto a ser memorizado ($M$).
-Tomando a modelagem anterior como uma verdade podemos apenas acrescentar a taxa de esquecimento na modelagem da problematização anterior:
-\begin{equation}
-\boldmath
-\frac{dA}{dt} = k(M- A(t)) - c(A(t))
-\end{equation}
+Em geral, definimos um operador diferencial de ordem $n$ como $$L = a_n(x)D^n+a_{n-1}(x)D^{n-1}+...+a_1(x)D+a_0(x) (4)$$ Obs.: Devido a linearidade da diferenciação temos que o operador $L$ dado em (4) é linear.
+
+* Temos EDO linear pode ser expressa em termos de $D$, por exemplo:
+
+A equação diferencial linear $y''+5y'+6y=5x-3$ pode ser escrita como: $$D^2y+5Dy+6y=5x-3$$ ou ainda $$(D^2+5D+6)y=5x-3$$
+
+Logo, usando (4) podemos escrever as EDO's lineares de ordem $n$ (2) e (3) como $$L(y)=0 e L(y)=g(x)$$ respectivamente.
+$$L(y)=0(seta ida e volta)a_nD^ny+a$$
